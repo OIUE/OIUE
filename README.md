@@ -1,8 +1,11 @@
 OIUE
 =======
+
+```
 项目交流吐槽QQ群：10939695  作者：Every、马航军等
 敬请参与 联系我们：team@oiue.org 
 提议吐槽：https://issues.sonatype.org/browse/OSSRH-23545
+```
 #Open Intelligent Unitive Efficient
 ##开放 智能 统一 高效
 题外话：
