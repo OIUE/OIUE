@@ -177,19 +177,19 @@ conf是各服务的配置文件
 	<parent>
 		<groupId>org.oiue.services</groupId>
 		<artifactId>services</artifactId>
-		<version>1.0.0</version>
+		<version>1.0.1</version>
 	</parent>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.oiue.services</groupId>
 			<artifactId>org.oiue.service.auth</artifactId>
-			<version>1.0.0</version>
+			<version>1.0.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.oiue.services.odps</groupId>
 			<artifactId>org.oiue.service.odp.res.api</artifactId>
-			<version>1.0.0</version>
+			<version>1.0.1</version>
 		</dependency>
 	</dependencies>
 	<properties>
@@ -709,7 +709,7 @@ B/S获取订阅消息指令格式如下：
 ##系统桌面
 请求系统SCREEN菜单如下：
 
-`/services/1.0.0/chat_execute/fm_system_query_screen`
+`/services/1.0.1/chat_execute/fm_system_query_screen`
 
 返回如下：
 
@@ -747,7 +747,7 @@ B/S获取订阅消息指令格式如下：
 ##子系统一级菜单
 请求系统一级菜单如下：
 
-`/services/1.0.0/execute/fm_system_query_menu`
+`/services/1.0.1/execute/fm_system_query_menu`
 
 返回如下：
 
@@ -785,7 +785,7 @@ B/S获取订阅消息指令格式如下：
 ##请求子菜单
 请求系统一级菜单如下：
 
-`/services/1.0.0/execute/fm_system_query_childmenu`
+`/services/1.0.1/execute/fm_system_query_childmenu`
 参数
 
 ```
@@ -831,7 +831,7 @@ B/S获取订阅消息指令格式如下：
 ###组织机构查询
 请求地址如下：
 
-`/services/1.0.0/execute/fm_system_query_corp`
+`/services/1.0.1/execute/fm_system_query_corp`
 参数
 `无`
 返回如下：
@@ -857,7 +857,7 @@ B/S获取订阅消息指令格式如下：
 ###组织机构下属机构查询
 请求地址如下：
 
-`/services/1.0.0/execute/fm_system_query_corp_child`
+`/services/1.0.1/execute/fm_system_query_corp_child`
 参数
 
 
@@ -890,7 +890,7 @@ B/S获取订阅消息指令格式如下：
 ###增加组织机构下属机构
 请求地址如下：
 
-`/services/1.0.0/execute/fm_system_insert_corp`
+`/services/1.0.1/execute/fm_system_insert_corp`
 参数
 
 ```
@@ -908,7 +908,7 @@ B/S获取订阅消息指令格式如下：
 ###修改组织机构
 请求地址如下：
 
-`/services/1.0.0/execute/fm_system_update_corp`
+`/services/1.0.1/execute/fm_system_update_corp`
 参数
 
 ```
@@ -927,7 +927,7 @@ B/S获取订阅消息指令格式如下：
 ###组织机构下属用户查询
 请求地址如下：
 
-`/services/1.0.0/execute/fm_system_query_corp_user`
+`/services/1.0.1/execute/fm_system_query_corp_user`
 参数
 
 
@@ -970,7 +970,7 @@ B/S获取订阅消息指令格式如下：
 ###增加组织机构下属用户
 请求地址如下：
 
-`/services/1.0.0/execute/fm_system_insert_user`
+`/services/1.0.1/execute/fm_system_insert_user`
 参数
 
 ```
@@ -998,7 +998,7 @@ B/S获取订阅消息指令格式如下：
 ###修改用户信息
 请求地址如下：
 
-`/services/1.0.0/execute/fm_system_update_user`
+`/services/1.0.1/execute/fm_system_update_user`
 参数
 
 ```
@@ -1028,7 +1028,7 @@ B/S获取订阅消息指令格式如下：
 ###查询服务分类
 请求地址如下：
 
-`/services/1.0.0/execute/d96c960f-8d23-4a64-92d5-035abde07c33`
+`/services/1.0.1/execute/d96c960f-8d23-4a64-92d5-035abde07c33`
 参数无
 返回如下：
 
@@ -1047,7 +1047,7 @@ B/S获取订阅消息指令格式如下：
 ###查询服务
 请求地址如下：
 
-`/services/1.0.0/execute/0581fa6f-733b-49f0-8772-ebbc3cb4d7b7`
+`/services/1.0.1/execute/0581fa6f-733b-49f0-8772-ebbc3cb4d7b7`
 参数无
 返回如下：
 
@@ -1071,7 +1071,7 @@ B/S获取订阅消息指令格式如下：
 ###查询数据源
 请求地址如下：
 
-`/services/1.0.0/execute/8e9cd8f7-ccdb-426b-b251-1bdf51480421`
+`/services/1.0.1/execute/8e9cd8f7-ccdb-426b-b251-1bdf51480421`
 参数无
 返回如下：
 
@@ -1098,7 +1098,7 @@ B/S获取订阅消息指令格式如下：
 ###查询数据源配置
 请求地址如下：
 
-`/services/1.0.0/execute/a5a547ae-f126-48ad-9f4e-2642189c1e6f`
+`/services/1.0.1/execute/a5a547ae-f126-48ad-9f4e-2642189c1e6f`
 参数无
 返回如下：
 
@@ -1130,7 +1130,7 @@ B/S获取订阅消息指令格式如下：
 ###增加数据源
 请求地址如下：
 
-`/services/1.0.0/execute/fm_system_add_services_event`
+`/services/1.0.1/execute/fm_system_add_services_event`
 参数
 
 ```
@@ -1181,105 +1181,105 @@ OIUE开放服务|https://github.com/OIUE/OIUE-SERVICES
 
 服务名称|纯接口|bundle
 ---|---|---
-工具包|N|[org.oiue.tools-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue/tools/1.0.0)
-启动容器隔离封装服务（基于OSGI）|N|[org.oiue.service.osgi.rpc-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.osgi.rpc/1.0.0)
-Action服务定义|Y|[org.oiue.service.action.api-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.actions/org.oiue.service.action.api/1.0.0)
-Action调度服务实现|N|[org.oiue.service.action.base-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.actions/org.oiue.service.action.base/1.0.0)
-ActionFilter认证服务|N|[org.oiue.service.action.filter.auth-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.actions/org.oiue.service.action.filter.auth/1.0.0)
-免登陆调试服务|N|org.oiue.service.action.filter.auth.debug-1.0.0.jar
-Action服务HTTP方式访问实现OLD|N|org.oiue.service.action.http.action-1.0.0.jar
-HTTP图片验证码服务|N|[org.oiue.service.action.http.imageCode-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.actions/org.oiue.service.action.http.imageCode/1.0.0)
-Action服务HTTP方式访问实现NEW|N|[org.oiue.service.action.http.services-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.actions/org.oiue.service.action.http.services/1.0.0)
-HTTP文件上传服务|N|[org.oiue.service.action.http.upload-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.actions/org.oiue.service.action.http.upload/1.0.0)
-Action服务TCP方式JSON访问实现|N|[org.oiue.service.action.tcp.action-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.actions/org.oiue.service.action.tcp.action/1.0.0)
-Action服务TCP方式流访问实现|N|[org.oiue.service.action.tcp.bytes-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.actions/org.oiue.service.action.tcp.bytes/1.0.0)
-认证服务定义|Y|[org.oiue.service.auth-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.auth/1.0.0)
-认证调度服务实现|N|[org.oiue.service.auth.impl-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.auth.impl/1.0.0)
-本地认证服务实现(直接查jdbc库)|N|[org.oiue.service.auth.local-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.auth.local/1.0.0)
-自定义缓存定义|Y|[org.oiue.service.buffer-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.buffer/1.0.0)
-自定义缓存实现|N|[org.oiue.service.buffer.impl-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.buffer.impl/1.0.0)
-自定义缓存同步服务|N|[org.oiue.service.buffer.synchronization.db-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.buffer.synchronization.db/1.0.0)
-流数据编解码处理服务定义|Y|[org.oiue.service.bytes.api-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.bytes/org.oiue.service.bytes.api)
-流数据编解码调度处理服务实现|N|[org.oiue.service.bytes.base-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.bytes/org.oiue.service.bytes.base)
-数据流编解码|N|[org.oiue.service.bytes.bytes-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.bytes/org.oiue.service.bytes.bytes)
-整形数据编解码|N|[org.oiue.service.bytes.int16-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.bytes/org.oiue.service.bytes.int16)
-字符串编解码|N|[org.oiue.service.bytes.string-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.bytes/org.oiue.service.bytes.string)
-缓存服务定义|Y|[org.oiue.service.cache-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.cache)
-自定义缓存实现|N|[org.oiue.service.cache.buffer-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.cache.buffer)
-缓存调度实现|N|[org.oiue.service.cache.impl-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.cache.impl)
-混存redis封装|N|[org.oiue.service.cache.jedis-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.cache.jedis)
-混存脚本操作|N|[org.oiue.service.cache.script-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.cache.script)
-树状结构缓存定义|Y|[org.oiue.service.cache.tree-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.cache.tree)
-树状缓存脚本操作|N|[org.oiue.service.cache.tree.script-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.cache.tree.script)
-树状缓存zookeeper封装|N|[org.oiue.service.cache.tree.zookeeper.curator-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.cache.tree.zookeeper.curator)
-缓存调试服务|N|org.oiue.service.debug.cache-1.0.0.jar
-Http客户端调试服务|N|org.oiue.service.debug.httpclient-1.0.0.jar
-资源操作调试服务|N|org.oiue.service.debug.res-1.0.0.jar
-树状缓存调试服务|N|org.oiue.service.debug.treecache-1.0.0.jar
-数据接入总线服务定义|Y|[org.oiue.service.driver.api-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.drivers/org.oiue.service.driver.api)
-数据接入总线调度实现|N|[org.oiue.service.driver.base-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.drivers/org.oiue.service.driver.base)
-数据总线过滤实现|N|[org.oiue.service.driver.filter.impl-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.drivers/org.oiue.service.driver.filter.impl)
-数据总线订阅实现|N|[org.oiue.service.driver.listener.impl-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.drivers/org.oiue.service.driver.listener.impl)
-数据总线存储实现|N|[org.oiue.service.driver.listener.storage-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.drivers/org.oiue.service.driver.listener.storage)
-事件执行服务定义|Y|[org.oiue.service.event.execute-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.event.execute)
-事件执行服务实现|N|[org.oiue.service.event.execute.impl-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.event.execute.impl)
-获取系统时间事件定义|Y|[org.oiue.service.event.system.time-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.event.system.time)
-获取系统时间事件实现|N|[org.oiue.service.event.system.time.impl-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.event.system.time.impl)
-文件上传服务定义|Y|[org.oiue.service.file.upload-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.file.upload)
-文件上传服务实现|N|[org.oiue.service.file.upload.impl-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.file.upload.impl)
-HTTP客户端服务定义|Y|[org.oiue.service.http.client-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.http.client)
-apacheHttp客户端封装|N|[org.oiue.service.http.client.apache-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.http.client.apache)
-日志服务定义|Y|[org.oiue.service.log-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.log)
-日志Log4j封装|N|[org.oiue.service.log4j-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.log4j)
-消息服务定义|Y|[org.oiue.service.message-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.message)
-消息服务实现|N|[org.oiue.service.message.impl-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.message.impl)
-JDBC事务基础服务|N|[org.oiue.service.odp.base-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.odps/org.oiue.service.odp.base)
-H2持久层底层公共方法定义|N|[org.oiue.service.odp.dmo.h2-1.0.0.jar]()
-Mysql持久层底层公共方法定义|N|[org.oiue.service.odp.dmo.mysql-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.odps/org.oiue.service.odp.dmo.mysql)
-Neo4j持久层底层公共方法定义|N|[org.oiue.service.odp.dmo.neo4j-1.0.0.jar]()
-Postgresql持久层底层公共方法定义|N|[org.oiue.service.odp.dmo.postgresql-1.0.0.jar]()
-数据操作事件定义|Y|[org.oiue.service.odp.event.api-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.odps.events/org.oiue.service.odp.event.api)
-数据操作事件Mysql实现|N|[org.oiue.service.odp.event.dmo.mysql-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.odps/org.oiue.service.odp.dmo.mysql)
-数据操作事件Mysql查询实现|N|[org.oiue.service.odp.event.dmo.mysql.q-1.0.0.jar]()
-数据操作事件Mysql单条查询实现|N|[org.oiue.service.odp.event.dmo.mysql.select-1.0.0.jar]()
-数据操作事件Mysql多条查询实现|N|[org.oiue.service.odp.event.dmo.mysql.selects-1.0.0.jar]()
-数据操作事件Mysql查询事件转换实现|N|[org.oiue.service.odp.event.dmo.mysql.t-1.0.0.jar]()
-数据操作事件Neo4j实现|N|[org.oiue.service.odp.event.dmo.neo4j-1.0.0.jar]()
-数据操作事件Neo4j插入实现|N|[org.oiue.service.odp.event.dmo.neo4j.insert-1.0.0.jar]()
-数据操作事件Postgresql实现|N|[org.oiue.service.odp.event.dmo.postgresql-1.0.0.jar]()
-数据操作事件Postgresql查询实现|N|[org.oiue.service.odp.event.dmo.postgresql.q-1.0.0.jar]()
-数据操作事件Postgresql查询实现|N|[org.oiue.service.odp.event.dmo.postgresql.query-1.0.0.jar]()
-数据操作事件Postgresql查询实现|N|[org.oiue.service.odp.event.dmo.postgresql.selects-1.0.0.jar]()
-事件sql处理定义|Y|[org.oiue.service.odp.event.sql.structure-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.odps.events/org.oiue.service.odp.event.sql.structure)
-事件sql处理实现|N|[org.oiue.service.odp.event.sql.structure.impl-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.odps.events/org.oiue.service.odp.event.sql.structure.impl)
-资源操作服务定义|Y|[org.oiue.service.odp.res.api-1.0.0.jar]()
-资源操作服务业务实现|N|[org.oiue.service.odp.res.base-1.0.0.jar]()
-资源操作持久层定义|Y|[org.oiue.service.odp.res.dmo-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.odps/org.oiue.service.odp.res.dmo)
-H2资源操作持久层实现|N|[org.oiue.service.odp.res.dmo.h2-1.0.0.jar]()
-Mysql资源操作持久层实现|N|[org.oiue.service.odp.res.dmo.mysql-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.odps/org.oiue.service.odp.res.dmo.mysql)
-Neo4j资源操作持久层实现|N|[org.oiue.service.odp.res.dmo.neo4j-1.0.0.jar]()
-sql处理定义|Y|[org.oiue.service.odp.structure-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.odps/org.oiue.service.odp.structure)
-sql处理实现|N|[org.oiue.service.odp.structure.impl-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.odps.events/org.oiue.service.odp.event.sql.structure.impl)
-查询sql处理实现|N|[org.oiue.service.odp.structure.selectsql-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.odps/org.oiue.service.odp.structure.selectsql)
-在线维护服务定义|Y|[org.oiue.service.online-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.online)
-在线维护服务实现|N|[org.oiue.service.online.impl-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.online.impl)
-权限校验服务定义|Y|[org.oiue.service.permission-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.permission)
-权限校验调度服务实现|N|[org.oiue.service.permission.impl-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.permission.impl)
-访问鉴权及转换服务|N|[org.oiue.service.permission.verify-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.permission.verify)
-JDBC连接池定义|Y|[org.oiue.service.sql-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.sql)
-Apache的JDBC连接池封装|N|[org.oiue.service.sql.apache-1.0.0.jar]()
-系统分析服务定义|Y|[org.oiue.service.system.analyzer-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.system.analyzer)
-系统分析服务实现|N|[org.oiue.service.system.analyzer.impl-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.system.analyzer.impl)
-定时任务调度服务定义|Y|[org.oiue.service.task-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.task)
-定时任务调度|N|[org.oiue.service.task.quartz-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.task.quartz)
-TCP/UDP服务定义|Y|[org.oiue.service.tcp-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.tcp)
-Mina封装|N|[org.oiue.service.tcp.mina-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.tcp.mina)
-模板定义|Y|[org.oiue.service.template.api-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.templates/org.oiue.service.template.api)
-模板管理服务实现|N|[org.oiue.service.template.base-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.templates/org.oiue.service.template.base)
-beetl封装|N|[org.oiue.service.template.beetl-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.template.beetl)
-velocity封装|N|[org.oiue.service.template.velocity-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services.templates/org.oiue.service.template.velocity)
-线程池定义|Y|[org.oiue.service.threadpool-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.threadpool)
-线程池实现|N|[org.oiue.service.threadpool.impl-1.0.0.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.threadpool.impl)
+工具包|N|[org.oiue.tools-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue/tools/1.0.1)
+启动容器隔离封装服务（基于OSGI）|N|[org.oiue.service.osgi.rpc-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.osgi.rpc/1.0.1)
+Action服务定义|Y|[org.oiue.service.action.api-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.actions/org.oiue.service.action.api/1.0.1)
+Action调度服务实现|N|[org.oiue.service.action.base-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.actions/org.oiue.service.action.base/1.0.1)
+ActionFilter认证服务|N|[org.oiue.service.action.filter.auth-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.actions/org.oiue.service.action.filter.auth/1.0.1)
+免登陆调试服务|N|org.oiue.service.action.filter.auth.debug-1.0.1.jar
+Action服务HTTP方式访问实现OLD|N|org.oiue.service.action.http.action-1.0.1.jar
+HTTP图片验证码服务|N|[org.oiue.service.action.http.imageCode-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.actions/org.oiue.service.action.http.imageCode/1.0.1)
+Action服务HTTP方式访问实现NEW|N|[org.oiue.service.action.http.services-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.actions/org.oiue.service.action.http.services/1.0.1)
+HTTP文件上传服务|N|[org.oiue.service.action.http.upload-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.actions/org.oiue.service.action.http.upload/1.0.1)
+Action服务TCP方式JSON访问实现|N|[org.oiue.service.action.tcp.action-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.actions/org.oiue.service.action.tcp.action/1.0.1)
+Action服务TCP方式流访问实现|N|[org.oiue.service.action.tcp.bytes-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.actions/org.oiue.service.action.tcp.bytes/1.0.1)
+认证服务定义|Y|[org.oiue.service.auth-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.auth/1.0.1)
+认证调度服务实现|N|[org.oiue.service.auth.impl-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.auth.impl/1.0.1)
+本地认证服务实现(直接查jdbc库)|N|[org.oiue.service.auth.local-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.auth.local/1.0.1)
+自定义缓存定义|Y|[org.oiue.service.buffer-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.buffer/1.0.1)
+自定义缓存实现|N|[org.oiue.service.buffer.impl-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.buffer.impl/1.0.1)
+自定义缓存同步服务|N|[org.oiue.service.buffer.synchronization.db-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.buffer.synchronization.db/1.0.1)
+流数据编解码处理服务定义|Y|[org.oiue.service.bytes.api-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.bytes/org.oiue.service.bytes.api)
+流数据编解码调度处理服务实现|N|[org.oiue.service.bytes.base-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.bytes/org.oiue.service.bytes.base)
+数据流编解码|N|[org.oiue.service.bytes.bytes-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.bytes/org.oiue.service.bytes.bytes)
+整形数据编解码|N|[org.oiue.service.bytes.int16-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.bytes/org.oiue.service.bytes.int16)
+字符串编解码|N|[org.oiue.service.bytes.string-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.bytes/org.oiue.service.bytes.string)
+缓存服务定义|Y|[org.oiue.service.cache-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.cache)
+自定义缓存实现|N|[org.oiue.service.cache.buffer-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.cache.buffer)
+缓存调度实现|N|[org.oiue.service.cache.impl-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.cache.impl)
+混存redis封装|N|[org.oiue.service.cache.jedis-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.cache.jedis)
+混存脚本操作|N|[org.oiue.service.cache.script-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.cache.script)
+树状结构缓存定义|Y|[org.oiue.service.cache.tree-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.cache.tree)
+树状缓存脚本操作|N|[org.oiue.service.cache.tree.script-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.cache.tree.script)
+树状缓存zookeeper封装|N|[org.oiue.service.cache.tree.zookeeper.curator-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.cache.tree.zookeeper.curator)
+缓存调试服务|N|org.oiue.service.debug.cache-1.0.1.jar
+Http客户端调试服务|N|org.oiue.service.debug.httpclient-1.0.1.jar
+资源操作调试服务|N|org.oiue.service.debug.res-1.0.1.jar
+树状缓存调试服务|N|org.oiue.service.debug.treecache-1.0.1.jar
+数据接入总线服务定义|Y|[org.oiue.service.driver.api-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.drivers/org.oiue.service.driver.api)
+数据接入总线调度实现|N|[org.oiue.service.driver.base-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.drivers/org.oiue.service.driver.base)
+数据总线过滤实现|N|[org.oiue.service.driver.filter.impl-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.drivers/org.oiue.service.driver.filter.impl)
+数据总线订阅实现|N|[org.oiue.service.driver.listener.impl-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.drivers/org.oiue.service.driver.listener.impl)
+数据总线存储实现|N|[org.oiue.service.driver.listener.storage-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.drivers/org.oiue.service.driver.listener.storage)
+事件执行服务定义|Y|[org.oiue.service.event.execute-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.event.execute)
+事件执行服务实现|N|[org.oiue.service.event.execute.impl-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.event.execute.impl)
+获取系统时间事件定义|Y|[org.oiue.service.event.system.time-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.event.system.time)
+获取系统时间事件实现|N|[org.oiue.service.event.system.time.impl-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.event.system.time.impl)
+文件上传服务定义|Y|[org.oiue.service.file.upload-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.file.upload)
+文件上传服务实现|N|[org.oiue.service.file.upload.impl-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.file.upload.impl)
+HTTP客户端服务定义|Y|[org.oiue.service.http.client-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.http.client)
+apacheHttp客户端封装|N|[org.oiue.service.http.client.apache-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.http.client.apache)
+日志服务定义|Y|[org.oiue.service.log-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.log)
+日志Log4j封装|N|[org.oiue.service.log4j-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.log4j)
+消息服务定义|Y|[org.oiue.service.message-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.message)
+消息服务实现|N|[org.oiue.service.message.impl-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.message.impl)
+JDBC事务基础服务|N|[org.oiue.service.odp.base-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.odps/org.oiue.service.odp.base)
+H2持久层底层公共方法定义|N|[org.oiue.service.odp.dmo.h2-1.0.1.jar]()
+Mysql持久层底层公共方法定义|N|[org.oiue.service.odp.dmo.mysql-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.odps/org.oiue.service.odp.dmo.mysql)
+Neo4j持久层底层公共方法定义|N|[org.oiue.service.odp.dmo.neo4j-1.0.1.jar]()
+Postgresql持久层底层公共方法定义|N|[org.oiue.service.odp.dmo.postgresql-1.0.1.jar]()
+数据操作事件定义|Y|[org.oiue.service.odp.event.api-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.odps.events/org.oiue.service.odp.event.api)
+数据操作事件Mysql实现|N|[org.oiue.service.odp.event.dmo.mysql-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.odps/org.oiue.service.odp.dmo.mysql)
+数据操作事件Mysql查询实现|N|[org.oiue.service.odp.event.dmo.mysql.q-1.0.1.jar]()
+数据操作事件Mysql单条查询实现|N|[org.oiue.service.odp.event.dmo.mysql.select-1.0.1.jar]()
+数据操作事件Mysql多条查询实现|N|[org.oiue.service.odp.event.dmo.mysql.selects-1.0.1.jar]()
+数据操作事件Mysql查询事件转换实现|N|[org.oiue.service.odp.event.dmo.mysql.t-1.0.1.jar]()
+数据操作事件Neo4j实现|N|[org.oiue.service.odp.event.dmo.neo4j-1.0.1.jar]()
+数据操作事件Neo4j插入实现|N|[org.oiue.service.odp.event.dmo.neo4j.insert-1.0.1.jar]()
+数据操作事件Postgresql实现|N|[org.oiue.service.odp.event.dmo.postgresql-1.0.1.jar]()
+数据操作事件Postgresql查询实现|N|[org.oiue.service.odp.event.dmo.postgresql.q-1.0.1.jar]()
+数据操作事件Postgresql查询实现|N|[org.oiue.service.odp.event.dmo.postgresql.query-1.0.1.jar]()
+数据操作事件Postgresql查询实现|N|[org.oiue.service.odp.event.dmo.postgresql.selects-1.0.1.jar]()
+事件sql处理定义|Y|[org.oiue.service.odp.event.sql.structure-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.odps.events/org.oiue.service.odp.event.sql.structure)
+事件sql处理实现|N|[org.oiue.service.odp.event.sql.structure.impl-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.odps.events/org.oiue.service.odp.event.sql.structure.impl)
+资源操作服务定义|Y|[org.oiue.service.odp.res.api-1.0.1.jar]()
+资源操作服务业务实现|N|[org.oiue.service.odp.res.base-1.0.1.jar]()
+资源操作持久层定义|Y|[org.oiue.service.odp.res.dmo-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.odps/org.oiue.service.odp.res.dmo)
+H2资源操作持久层实现|N|[org.oiue.service.odp.res.dmo.h2-1.0.1.jar]()
+Mysql资源操作持久层实现|N|[org.oiue.service.odp.res.dmo.mysql-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.odps/org.oiue.service.odp.res.dmo.mysql)
+Neo4j资源操作持久层实现|N|[org.oiue.service.odp.res.dmo.neo4j-1.0.1.jar]()
+sql处理定义|Y|[org.oiue.service.odp.structure-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.odps/org.oiue.service.odp.structure)
+sql处理实现|N|[org.oiue.service.odp.structure.impl-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.odps.events/org.oiue.service.odp.event.sql.structure.impl)
+查询sql处理实现|N|[org.oiue.service.odp.structure.selectsql-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.odps/org.oiue.service.odp.structure.selectsql)
+在线维护服务定义|Y|[org.oiue.service.online-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.online)
+在线维护服务实现|N|[org.oiue.service.online.impl-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.online.impl)
+权限校验服务定义|Y|[org.oiue.service.permission-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.permission)
+权限校验调度服务实现|N|[org.oiue.service.permission.impl-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.permission.impl)
+访问鉴权及转换服务|N|[org.oiue.service.permission.verify-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.permission.verify)
+JDBC连接池定义|Y|[org.oiue.service.sql-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.sql)
+Apache的JDBC连接池封装|N|[org.oiue.service.sql.apache-1.0.1.jar]()
+系统分析服务定义|Y|[org.oiue.service.system.analyzer-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.system.analyzer)
+系统分析服务实现|N|[org.oiue.service.system.analyzer.impl-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.system.analyzer.impl)
+定时任务调度服务定义|Y|[org.oiue.service.task-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.task)
+定时任务调度|N|[org.oiue.service.task.quartz-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.task.quartz)
+TCP/UDP服务定义|Y|[org.oiue.service.tcp-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.tcp)
+Mina封装|N|[org.oiue.service.tcp.mina-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.tcp.mina)
+模板定义|Y|[org.oiue.service.template.api-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.templates/org.oiue.service.template.api)
+模板管理服务实现|N|[org.oiue.service.template.base-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.templates/org.oiue.service.template.base)
+beetl封装|N|[org.oiue.service.template.beetl-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.template.beetl)
+velocity封装|N|[org.oiue.service.template.velocity-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services.templates/org.oiue.service.template.velocity)
+线程池定义|Y|[org.oiue.service.threadpool-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.threadpool)
+线程池实现|N|[org.oiue.service.threadpool.impl-1.0.1.jar](https://mvnrepository.com/artifact/org.oiue.services/org.oiue.service.threadpool.impl)
 
 [more](http://www.oiue.org)
 
