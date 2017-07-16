@@ -1,7 +1,8 @@
 #!/bin/sh
 
 if [ "$JAVA_HOME" = "" ]; then
-	JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/jre/"
+	JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-3.b12.el7_3.x86_64/jre/"
+#	JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/jre/"
 fi
 if [ "$SMARTLBS_HOME" = "" ]; then
 	SMARTLBS_HOME="/work/github/main"

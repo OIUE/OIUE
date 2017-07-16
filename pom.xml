@@ -1,16 +1,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<packaging>pom</packaging>
+	<packaging>jar</packaging>
 	<name>Main</name>
 	<groupId>org.oiue</groupId>
 	<artifactId>main</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<dependencies>
 		<dependency>
 			<groupId>${felix.groupId}</groupId>
 			<artifactId>org.apache.felix.main</artifactId>
-			<version>5.6.0</version>
+			<version>5.6.4</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
 		</dependency>
 	</dependencies>
 	<properties>
@@ -23,11 +28,11 @@
 		<http.base.version>3.0.8</http.base.version>
 		<jetty.version>3.1.2</jetty.version>
 		<eventadmin.version>1.4.4</eventadmin.version>
-		<webconsole.version>4.2.16</webconsole.version>
+		<webconsole.version>4.3.4</webconsole.version>
 		<threaddump.version>1.0.0</threaddump.version>
 		<oiue.groupId>org.oiue.services</oiue.groupId>
-		<rpc.version>1.0.0</rpc.version>
-		<oiue.version>1.0.0</oiue.version>
+		<rpc.version>${version}</rpc.version>
+		<oiue.version>${version}</oiue.version>
 	</properties>
 	<build>
 		<plugins>
@@ -63,6 +68,22 @@
 						<configuration>
 							<artifactItems>
 								<artifactItem>
+									<groupId>commons-fileupload</groupId>
+									<artifactId>commons-fileupload</artifactId>
+									<version>1.3.1</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.basedir}/bundle</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>commons-io</groupId>
+									<artifactId>commons-io</artifactId>
+									<version>2.4</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.basedir}/bundle</outputDirectory>
+								</artifactItem>
+								<artifactItem>
 									<groupId>${felix.groupId}</groupId>
 									<artifactId>org.apache.felix.bundlerepository</artifactId>
 									<version>${obr.version}</version>
@@ -88,6 +109,14 @@
 								</artifactItem>
 								<artifactItem>
 									<groupId>${felix.groupId}</groupId>
+									<artifactId>org.apache.felix.inventory</artifactId>
+									<version>1.0.4</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.basedir}/bundle</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>${felix.groupId}</groupId>
 									<artifactId>org.apache.felix.threaddump</artifactId>
 									<version>${threaddump.version}</version>
 									<type>jar</type>
@@ -107,7 +136,7 @@
 								<!--http://git.oschina.net/every.oschina.net/OIUE/blob/master/conf/org/oiue/service/osgi/rpc/Activator.config?dir=0&filepath=conf%2Forg%2Foiue%2Fservice%2Fosgi%2Frpc%2FActivator.config&oid=b4936393daf0fcae071facca5582a143c83fae35&sha=dde2dfae5c8b802e6d53f26186c2682eba29439b-->
 								<!--https://github.com/OIUE/OIUE/blob/master/conf/org/oiue/service/osgi/rpc/Activator.config-->
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.osgi.rpc</artifactId>
 									<version>${rpc.version}</version>
 									<type>jar</type>
@@ -115,7 +144,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.cache.tree</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -123,7 +152,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.log</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -131,7 +160,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.system.analyzer</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -141,7 +170,7 @@
 								<!--http://git.oschina.net/every.oschina.net/OIUE/blob/master/conf/org/oiue/service/cache/tree/zookeeper/curator/Activator.config?dir=0&filepath=conf%2Forg%2Foiue%2Fservice%2Fcache%2Ftree%2Fzookeeper%2Fcurator%2FActivator.config&oid=14ef50b79711019c20901e21d1e4dec05b32205d&sha=dde2dfae5c8b802e6d53f26186c2682eba29439b-->
 								<!--https://github.com/OIUE/OIUE/blob/master/conf/org/oiue/service/cache/tree/zookeeper/curator/Activator.config-->
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.cache.tree.zookeeper.curator</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -151,7 +180,7 @@
 								<!--http://git.oschina.net/every.oschina.net/OIUE/blob/master/conf/org/oiue/service/log4j/Activator.config?dir=0&filepath=conf%2Forg%2Foiue%2Fservice%2Flog4j%2FActivator.config&oid=22a413a2982e247e8be25bda2e85c1fedf8953e1&sha=dde2dfae5c8b802e6d53f26186c2682eba29439b-->
 								<!--https://github.com/OIUE/OIUE/blob/master/conf/org/oiue/service/log4j/Activator.config-->
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.log4j</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -159,7 +188,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.system.analyzer.impl</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -168,7 +197,7 @@
 								</artifactItem>
 								
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.sql</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -178,7 +207,7 @@
 								<!--http://git.oschina.net/every.oschina.net/OIUE/blob/master/conf/org/oiue/service/sql/apache/Activator.config?dir=0&filepath=conf%2Forg%2Foiue%2Fservice%2Fsql%2Fapache%2FActivator.config&oid=837a39c8bad5e2da9a4b58565362b15241537692&sha=dde2dfae5c8b802e6d53f26186c2682eba29439b-->
 								<!--https://github.com/OIUE/OIUE/blob/master/conf/org/oiue/service/sql/apache/Activator.config-->
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.sql.apache</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -236,7 +265,7 @@
 								</artifactItem>
 								
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.buffer</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -244,7 +273,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.buffer.impl</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -252,7 +281,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.cache</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -260,7 +289,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.cache.impl</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -268,7 +297,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.cache.jedis</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -276,7 +305,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.cache.script</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -284,7 +313,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.debug.cache</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -292,7 +321,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.cache.buffer</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -301,7 +330,7 @@
 								</artifactItem>
 								
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.online</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -311,7 +340,7 @@
 								<!--http://git.oschina.net/every.oschina.net/OIUE/blob/master/conf/org/oiue/service/odp/res/base/Activator.config?dir=0&filepath=conf%2Forg%2Foiue%2Fservice%2Fodp%2Fres%2Fbase%2FActivator.config&oid=758fe3ff79aaacfb040e969039304ef952df90c3&sha=dde2dfae5c8b802e6d53f26186c2682eba29439b-->
 								<!--https://github.com/OIUE/OIUE/blob/master/conf/org/oiue/service/online/impl/Activator.config-->
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.online.impl</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -328,7 +357,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.permission</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -336,7 +365,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.auth</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -362,7 +391,7 @@
 								</artifactItem>
 								
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.permission.impl</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -370,7 +399,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.auth.impl</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -606,7 +635,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.permission.verify</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -614,7 +643,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.auth.local</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -646,7 +675,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.file.upload</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -654,7 +683,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.file.upload.impl</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -662,7 +691,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.task</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -670,7 +699,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.task.quartz</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -678,7 +707,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.buffer.synchronization.db</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -686,7 +715,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.tcp</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -694,7 +723,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}</groupId>
+									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.tcp.mina</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
