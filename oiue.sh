@@ -41,10 +41,29 @@ fi
 if [ "$oldCP" != "" ]; then
     CLASSPATH=${CLASSPATH}:${oldCP}
 fi
-
+#-server -XX:+UseParallelGC -XX:+DisableExplicitGC -XX:PermSize=32M -XX:MaxPermSize=125m -Xms1024m -Xmx2500m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp/ -XX:+PrintClassHistogram -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintHeapAtGC -Xloggc:/tmp/gc.log  -cp $CLASSPATH ${SERVICE_CLA
+SS} &
+#		pid=`ps auxww|grep felix|grep -v grep|awk '{print $2}'`
+#		if [ -n "$pid" ];
+#		then
+#		{
+#		   echo "====netstat -anp|grep java >/tmp/nststat$pid.txt"
+#		   netstat -anp|grep java >/tmp/nststat$pid.txt
+#		   ps H -eo user,pid,ppid,tid,time,%cpu --sort=%cpu |grep $pid >/tmp/threadcpu$pid.txt
+#		   /usr/local/jdk1.6.0_35/bin/jstack $pid >/tmp/jstack$pid.txt
+#		   echo "==dump_memrry=="
+#		   /usr/local/jdk1.6.0_35/bin/jmap -dump:live,file=/tmp/dump_$pid.bin $pid
+#		   echo "======to shutdown the Core Felix Service========"
+#		   echo "shutdown"|exec nc localhost 7710
+#		   sleep 4
+#                   echo "======to kill the Sm@rtLBS pid $pid========"
+#                   kill -9 $pid
+#                   sleep 2
+#		}
+#		fi
 case "$1" in
 	start)
-       ${JAVACMD} -cp $CLASSPATH ${SERVICE_CLASS} &
+       ${JAVACMD} -server -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp/ -Dfile.encoding=UTF-8 -cp $CLASSPATH ${SERVICE_CLASS} &
 		;;
 	stop)
 		pid=`ps auxww|grep felix|grep -v grep|awk '{print $2}'`

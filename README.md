@@ -142,7 +142,10 @@ conf是各服务的配置文件
 
 执行`mvn install`
 修改oiue.sh中jre及工程的目录
-修改conf\org\oiue\service\sql\apache\Activator.config 连接自己的数据库
+修改`conf\org\oiue\service\sql\apache\Activator.config` 连接自己的数据库
+修改`conf/org/oiue/service/cache/jedis/Activator.config` 连接自己的redis数据库，redis必须设定密码连接方式
+修改`conf/org/oiue/service/cache/tree/zookeeper/curator/Activator.config` 连接自己的zookeeper
+
 执行`./oiue.sh start`启动服务
 
 
@@ -193,7 +196,7 @@ conf是各服务的配置文件
 		</dependency>
 	</dependencies>
 	<properties>
-		<project.activator>${artifactId}.Activator</project.activator>
+		<project.activator>${project.artifactId}.Activator</project.activator>
 	</properties>
 </project>
 ```
@@ -421,6 +424,66 @@ TCP/UDP字符流方式调用服务采用JSON格式的数据请求，经过相应
 HTTP字符流方式调用服务可分为实时请求及准实时请求。准实时请求为非高动态变更数据，在一定时间范围内请求与响应数据一致，如资源数据、档案数据、周期性数据等，准实时数据为平台对接集团CDN加速数据；实时数据为高动态数据，如位置上报等。服务平台接受客户端JSON格式的数据请求，经过相应处理转换为java原生对象传给后端服务及服务池。
 
 **HTTP请求地址为：***http://service:port/services/version/modulename/operation?*
+
+**请求格式定义：**
+
+```
+{
+	"tag": "12345",
+	"token:": "",
+	["processkey": "", ] 
+	["encrypt": "", ] 
+	["debug": "", ] 
+	["callback": "", ]
+	"data": {}
+}
+```
+
+其中：
+**modulename** 标识客户端调用模块名称
+**operation** 标识客户端操作
+**version** 模块版本，默认为最新版本，非必选
+**tag**标识客户端处理响应标记，请求信息原样返回，可作为客户端发起请求流水
+**token**为用户身份标识，用于标识当前请求发起的用户身份，登录用户获得的唯一标识
+**data**为请求业务数据实体，此数据将由管理类直接交互给对应处理服务
+**processkey** 事务key，默认单次请求为一次弱事物，若开启事物，需客户端手工结束事物，事物操作超时时间默认为300s，非必选
+**encrypt** 加密及压缩标识，默认为明文不压缩，非必选
+**debug** 调试标识，默认为非调试模式，非必选
+**callback** Jsonp支持，非必选
+**注：***目前后端仅支持kv请求，key为parameter,value为上述json*
+
+## 服务端响应调用返回外层格式定义
+**返回格式定义：**
+
+```
+{
+	["services": "action", "exception": "",]
+	"modulename": "queryCar", 
+	"operation": "", 
+	"tag": "12345",
+	"status": 1,
+	"msg": "",
+	["processkey": "",] 
+	[ "version": "",]
+	"data": {}
+}
+```
+其中:
+**services**标识该业务后端处理方法，
+**modulename**标识前端调用模块
+**operation** 标识后端操作
+**tag**为前端发起请求或注册后端回调时的回调参数
+**status**为后端处理状态,处理状态为success/warn/error。 success为成功标识；warn标识后端有一些警告信息，但并不影响整个流程处理，其中非关键异常信息存储在exception信息中；error标识后端处理发送关键异常，导致整个过程处理终端，其关键异常信息存储在exception中。
+**注：***<=-120  关键异常   <=-110 权限不足  <=-101尚未登录  <=-1非关键异常  >0 成功*
+**exception**为端产生的异常信息，此字段不作为关键参数存在
+**processkey**为后端传输给前端的回调参数，在处理流程事务，以及连续操作时使用，此字段也非关键参数
+**data**为后端处理服务响应数据
+
+## 客户端HTTP文件上传调用服务外层格式定义
+
+HTTP字符流方式调用服务可分为实时请求及准实时请求。准实时请求为非高动态变更数据，在一定时间范围内请求与响应数据一致，如资源数据、档案数据、周期性数据等，准实时数据为平台对接集团CDN加速数据；实时数据为高动态数据，如位置上报等。服务平台接受客户端JSON格式的数据请求，经过相应处理转换为java原生对象传给后端服务及服务池。
+
+**HTTP请求地址为：***http://service:port/upload/version/modulename/operation?*
 
 **请求格式定义：**
 
