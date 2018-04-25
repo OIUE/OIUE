@@ -414,6 +414,38 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
+									<groupId>${oiue.groupId}</groupId>
+									<artifactId>org.oiue.service.event.execute</artifactId>
+									<version>${oiue.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.basedir}/bundle</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>${oiue.groupId}</groupId>
+									<artifactId>org.oiue.service.event.etl</artifactId>
+									<version>${oiue.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.basedir}/bundle</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>${oiue.groupId}</groupId>
+									<artifactId>org.oiue.service.event.etl.impl</artifactId>
+									<version>${oiue.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.basedir}/bundle</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>${oiue.groupId}</groupId>
+									<artifactId>org.oiue.service.event.execute.impl</artifactId>
+									<version>${oiue.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.basedir}/bundle</outputDirectory>
+								</artifactItem>
+								<artifactItem>
 									<groupId>${oiue.groupId}.actions</groupId>
 									<artifactId>org.oiue.service.action.filter.auth</artifactId>
 									<version>${oiue.version}</version>
@@ -628,6 +660,14 @@
 								<artifactItem>
 									<groupId>${oiue.groupId}.odps.events</groupId>
 									<artifactId>org.oiue.service.odp.event.dmo.postgresql.query</artifactId>
+									<version>${oiue.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.basedir}/bundle</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>${oiue.groupId}.odps.events</groupId>
+									<artifactId>org.oiue.service.odp.event.dmo.postgresql.select</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
 									<overWrite>true</overWrite>
