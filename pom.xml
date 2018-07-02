@@ -74,6 +74,9 @@
 					<execution>
 						<id>copy-dependencies</id>
 						<phase>initialize</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
 						<configuration>
 							<outputDirectory>${project.basedir}/lib</outputDirectory>
 							<overWriteReleases>false</overWriteReleases>
@@ -91,6 +94,9 @@
 					<execution>
 						<id>copy</id>
 						<phase>package</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
 						<configuration>
 							<artifactItems>
 								<artifactItem>

@@ -11,5 +11,6 @@ conf/org/apache/felix/webconsole/internal/servlet
 conf/org/oiue/service/sql/apache
 conf/org/oiue/service/cache/jedis
 conf/org/oiue/service/cache/tree/zookeeper/curator
+conf/org/oiue/service/sql/apache/Activator.config
 conf/org/oiue/service/cache/jedis/Activator.config
 conf/org/oiue/service/cache/tree/zookeeper/curator/Activator.config
