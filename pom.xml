@@ -12,7 +12,7 @@
 		<dependency>
 			<groupId>org.oiue</groupId>
 			<artifactId>oiue-main</artifactId>
-			<version>1.0.1-SNAPSHOT</version>
+			<version>1.1.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-io</groupId>
@@ -74,9 +74,6 @@
 					<execution>
 						<id>copy-dependencies</id>
 						<phase>initialize</phase>
-						<goals>
-							<goal>copy-dependencies</goal>
-						</goals>
 						<configuration>
 							<outputDirectory>${project.basedir}/lib</outputDirectory>
 							<overWriteReleases>false</overWriteReleases>
@@ -94,9 +91,6 @@
 					<execution>
 						<id>copy</id>
 						<phase>package</phase>
-						<goals>
-							<goal>copy</goal>
-						</goals>
 						<configuration>
 							<artifactItems>
 								<artifactItem>
@@ -381,6 +375,14 @@
 								<artifactItem>
 									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.cache.jedis</artifactId>
+									<version>${oiue.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.basedir}/bundle</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.oiue.services</groupId>
+									<artifactId>org.oiue.service.cache.jdbc</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
 									<overWrite>true</overWrite>

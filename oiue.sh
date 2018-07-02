@@ -41,8 +41,7 @@ fi
 if [ "$oldCP" != "" ]; then
     CLASSPATH=${CLASSPATH}:${oldCP}
 fi
-#-server -XX:+UseParallelGC -XX:+DisableExplicitGC -XX:PermSize=32M -XX:MaxPermSize=125m -Xms1024m -Xmx2500m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp/ -XX:+PrintClassHistogram -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintHeapAtGC -Xloggc:/tmp/gc.log  -cp $CLASSPATH ${SERVICE_CLA
-SS} &
+#-server -XX:+UseParallelGC -XX:+DisableExplicitGC -XX:PermSize=32M -XX:MaxPermSize=125m -Xms1024m -Xmx2500m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp/ -XX:+PrintClassHistogram -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintHeapAtGC -Xloggc:/tmp/gc.log  -cp $CLASSPATH ${SERVICE_CLASS} &
 #		pid=`ps auxww|grep felix|grep -v grep|awk '{print $2}'`
 #		if [ -n "$pid" ];
 #		then
