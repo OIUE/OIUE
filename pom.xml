@@ -28,9 +28,9 @@
 		<http.api.version>3.0.0</http.api.version>
 		<log.version>1.0.1</log.version>
 		<http.base.version>3.0.8</http.base.version>
-		<jetty.version>3.1.2</jetty.version>
+		<jetty.version>4.0.1-SNAPSHOT</jetty.version>
 		<eventadmin.version>1.4.4</eventadmin.version>
-		<webconsole.version>4.3.4</webconsole.version>
+		<webconsole.version>4.3.5-SNAPSHOT</webconsole.version>
 		<threaddump.version>1.0.0</threaddump.version>
 		<oiue.groupId>org.oiue.services</oiue.groupId>
 		<rpc.version>${version}</rpc.version>
@@ -888,7 +888,7 @@
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.oiue.services</groupId>
-									<artifactId>org.oiue.service.tcp</artifactId>
+									<artifactId>org.oiue.service.io</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
 									<overWrite>true</overWrite>
@@ -896,7 +896,7 @@
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.oiue.services</groupId>
-									<artifactId>org.oiue.service.tcp.mina</artifactId>
+									<artifactId>org.oiue.service.io.mina</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
 									<overWrite>true</overWrite>
