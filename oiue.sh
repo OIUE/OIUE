@@ -12,7 +12,7 @@ JAVACMD="$JAVA_HOME/bin/java"
 #-Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=8000 
 JAVADBG="$JAVA_HOME/bin/java -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n"
 CLASS_HOME=""
-SERVICE_CLASS="org.apache.felix.main.Main"
+SERVICE_CLASS="org.oiue.main.Main"
 
 export LC_ALL=zh_CN.UTF-8
 
@@ -65,7 +65,7 @@ case "$1" in
        ${JAVACMD} -server -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp/ -Dfile.encoding=UTF-8 -cp $CLASSPATH ${SERVICE_CLASS} &
 		;;
 	stop)
-		pid=`ps auxww|grep felix|grep -v grep|awk '{print $2}'`
+		pid=`ps auxww|grep ${SERVICE_CLASS}|grep -v grep|awk '{print $2}'`
 		if [ -n "$pid" ];
 		then
 		{
