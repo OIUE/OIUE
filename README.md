@@ -150,8 +150,19 @@ conf是各服务的配置文件
 
 
 `开源库中提供了部分开放服务，可快捷搭建自己的各类应用服务。`
+**Meavn入门**
+一个基本的Meavn项目结构如下：
 
+```
+├── pom.xml
+└── src
+    ├── main
+    │   └── java
+    └── test
+        └── java
+```
 **创建自己的服务**[以实现登录认证为例]
+
 创建Meavn项目，
 
 ```
@@ -768,6 +779,85 @@ B/S获取订阅消息指令格式如下：
 **operation**标识为query查询订阅消息
 **tag**标识为获取指定订阅通道号的信息，需与上述订阅一致
 
+##FOTA
+获取最新版本信息 `/services/1.0.0/terminal/getFOTAInfo`
+请求地址 `/fota/version/type/imei`
+
+##创建实体对象Entity
+请求地址
+
+##HTTP数据接入
+请求地址 `/access/version/driverName/type`
+get方式
+post方式key/value
+post方式object
+请求参数：
+
+```
+{
+    "driverName": "lt-test",
+    "type": "track",
+    "tag": "tag",
+    "data": {
+        "imei": "sdfsdfsdfsdf",
+        "longitude": 123.999999,
+        "latitude": 45.999999,
+        "altitude": 1,
+        "speed": 99.99,
+        "bearing": 125,
+        "accuracy": 2.22,
+        "altitudeAccuracy": 1.99,
+        "timestamp": 123456546
+    }
+}
+```
+**driverName** 驱动名称
+**type** 数据类型
+**imei** 设备唯一标识
+**longitude** 经度
+**latitude** 维度
+**altitude** 高度
+**speed** 速度
+**bearing** 方向
+**accuracy** 经纬度精度
+**altitudeAccuracy** 高度精度
+**timestamp**定位时间（UTC秒）
+
+## 定位数据接入
+请求地址 `/access/version/16/location`
+请求参数：
+
+```
+{
+    "tag": "tag",
+    "data": {
+        "employee_id": "sdfsdfsdfsdf",
+        "longitude": 123.999999,
+        "latitude": 45.999999,
+        "altitude": 1,
+        "speed": 99.99,
+        "bearing": 125,
+        "accuracy": 2.22,
+        "altitudeAccuracy": 1.99,
+        "timestamp": 1514736000,
+        "city_cn": "北京",
+        "city_en": ”beijing“,
+    }
+}
+```
+参数:
+**employee_id** 设备唯一标识
+**longitude** 经度
+**latitude** 维度
+**altitude** 高度
+**speed** 速度
+**bearing** 方向
+**accuracy** 经纬度精度
+**altitudeAccuracy** 高度精度
+**timestamp**定位时间（UTC秒）
+**city_cn**城市名 中文
+**city_en** 城市名 英文
+
 #业务接口
 ##系统桌面
 请求系统SCREEN菜单如下：
@@ -1192,7 +1282,6 @@ B/S获取订阅消息指令格式如下：
 
 ###增加数据源
 请求地址如下：
-
 `/services/1.0.1/execute/fm_system_add_services_event`
 参数
 
@@ -1220,6 +1309,85 @@ B/S获取订阅消息指令格式如下：
 }
 ```
 **add_services_event**添加的数据源id
+###自定义数据源
+请求地址如下：
+`/services/1.0.1/execute/2d901cb4-84ea-46bd-bf49-5809cae70dac`
+参数
+
+```
+{
+	"data": {
+		"entity_desc": "对对对",
+		"fields": [{
+			"precision": 26,
+			"null_able": 0,
+			"type": "postgres_character_varying",
+			"column_desc": "放",
+			"primary_key": 1
+		}]
+	},
+	"tag": "tag"
+}
+```
+外层表信息字段释义
+**entity_class_id** 表实体所属分类，非必填，默认"Sm@rtMapX_system"
+**table_name** 表名称，遵循数据库表格命名规范，非必填，可自动生成
+**table_schema** 表模式，非必填，默认用户模式下
+**table_type** 表类型，非必填，默认为"user"
+**data_source_id** 所属数据源，非必填，默认为"fm_data_source_postgresql"
+**entity_desc** 表注释
+**remark** 表描述信息，非必填，默认为空
+**short_code** 快捷操作编码，非必填，默认为空
+**islevel** 是否为层级表[0,1]，非必填，默认为非层级表[0]
+表字段信息释义
+**column_name** 字段名称，非必填，可自动生成
+**column_desc** 字段注释
+**remark** 表字段描述信息，非必填，默认为空
+**null_able** 能否为空[0,1]，非必填，默认未允许空[1]
+**primary_key** 是否为主键，非必填，默认为非主键[0]
+**precision** 长度
+**scale** 小数精度
+**type** 字段类型，详见字段类型字典，默认未字符串
+**encrypt_type** 字段加密类型，非必填，默认为不加密[0]
+
+## 地址匹配
+请求地址如下：
+`/services/1.0.1/dataconvert/geocoding`
+参数
+
+```
+{
+    "conjunction": "and",
+    "filters": [
+        {
+            "service_event_config_id": "6a566b05-e0f4-43e6-b6d3-6dd9b324fabf",
+            "rule": "4f1392a2-491f-42b3-81ff-73f3f98e555b",
+            "value": "s",
+            "data_type_id": "postgres_character_varying"
+        }
+    ],
+    "column_province": "",
+    "column_city": "",
+    "column_district": "",
+    "column_address": ""
+}
+```
+标准返回
+
+## 逆地理接口
+请求地址如下：
+`/api/regeo/[lon,lat]`
+如：`/api/regeo/[116.29378573835402,39.89561127554049]`
+返回如下：
+
+```
+{
+    "lon": 116.29378573835402,
+    "lat": 39.89561127554049,
+    "desc": "北京市,丰台区,万丰路(西98米),金家村第二社区居民委员会外来人口管理站(南44米)"
+}
+```
+
 
 #微信小程序
 `近期有比较迫切的微信支付需求，选择了小程序支付，原本以为应该很快就可以搭起完整的流程，或许是因为不熟悉开程序开发和微信支付开发，利用零零散散的时间搞了几天才彻底打通，在此将所有过程记录下来并将成果分享给大家，让各位像我一样的微信盲快速实现微信小程序支付。
