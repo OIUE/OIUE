@@ -28,9 +28,9 @@
 		<http.api.version>3.0.0</http.api.version>
 		<log.version>1.0.1</log.version>
 		<http.base.version>3.0.8</http.base.version>
-		<jetty.version>4.0.1-SNAPSHOT</jetty.version>
+		<jetty.version>4.0.1</jetty.version>
 		<eventadmin.version>1.4.4</eventadmin.version>
-		<webconsole.version>4.3.5-SNAPSHOT</webconsole.version>
+		<webconsole.version>4.3.5</webconsole.version>
 		<threaddump.version>1.0.0</threaddump.version>
 		<oiue.groupId>org.oiue.services</oiue.groupId>
 		<rpc.version>${version}</rpc.version>
