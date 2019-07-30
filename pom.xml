@@ -645,7 +645,7 @@
 								</artifactItem>
 								<artifactItem>
 									<groupId>${oiue.groupId}.odps</groupId>
-									<artifactId>org.oiue.service.odp.structure</artifactId>
+									<artifactId>org.oiue.service.odp.event.sql.structure</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
 									<overWrite>true</overWrite>
@@ -653,7 +653,7 @@
 								</artifactItem>
 								<artifactItem>
 									<groupId>${oiue.groupId}.odps</groupId>
-									<artifactId>org.oiue.service.odp.structure.impl</artifactId>
+									<artifactId>org.oiue.service.odp.event.sql.structure.impl</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
 									<overWrite>true</overWrite>
