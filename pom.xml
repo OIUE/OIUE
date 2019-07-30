@@ -644,7 +644,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}.odps</groupId>
+									<groupId>${oiue.groupId}.odps.events</groupId>
 									<artifactId>org.oiue.service.odp.event.sql.structure</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -652,7 +652,7 @@
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
 								<artifactItem>
-									<groupId>${oiue.groupId}.odps</groupId>
+									<groupId>${oiue.groupId}.odps.events</groupId>
 									<artifactId>org.oiue.service.odp.event.sql.structure.impl</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -680,14 +680,6 @@
 								<artifactItem>
 									<groupId>${oiue.groupId}.odps</groupId>
 									<artifactId>org.oiue.service.odp.structure.selectsql</artifactId>
-									<version>${oiue.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${project.basedir}/bundle</outputDirectory>
-								</artifactItem>
-								<artifactItem>
-									<groupId>${oiue.groupId}.odps.events</groupId>
-									<artifactId>org.oiue.service.odp.event.sql.structure.impl</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
 									<overWrite>true</overWrite>
