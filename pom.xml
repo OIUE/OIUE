@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<packaging>jar</packaging>
 	<name>Main</name>
@@ -7,8 +6,7 @@
 	<artifactId>main</artifactId>
 	<version>1.1.0-SNAPSHOT</version>
 	<dependencies>
-		<!-- <dependency> <groupId>${felix.groupId}</groupId> <artifactId>org.apache.felix.main</artifactId> 
-			<version>5.6.4</version> </dependency> -->
+		<!-- <dependency> <groupId>${felix.groupId}</groupId> <artifactId>org.apache.felix.main</artifactId> <version>5.6.4</version> </dependency> -->
 		<dependency>
 			<groupId>org.oiue</groupId>
 			<artifactId>oiue.main</artifactId>
@@ -38,33 +36,33 @@
 	</properties>
 	<build>
 		<pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.eclipse.m2e</groupId>
-                    <artifactId>lifecycle-mapping</artifactId>
-                    <version>1.0.0</version>
-                    <configuration>
-                        <lifecycleMappingMetadata>
-                            <pluginExecutions>
-                                <pluginExecution>
-                                    <pluginExecutionFilter>
-                                        <groupId>org.apache.maven.plugins</groupId>
-                                        <artifactId>maven-dependency-plugin</artifactId>
-                                        <versionRange>[2.8,)</versionRange>
-                                        <goals>
-                                            <goal>copy-dependecies</goal>
-                                        </goals>
-                                    </pluginExecutionFilter>
-                                    <action>
-                                        <execute/>
-                                    </action>
-                                </pluginExecution>
-                            </pluginExecutions>
-                        </lifecycleMappingMetadata>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-dependency-plugin</artifactId>
+										<versionRange>[2.8,)</versionRange>
+										<goals>
+											<goal>copy-dependecies</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<execute />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -227,7 +225,7 @@
 									<overWrite>true</overWrite>
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
-								
+
 								<artifactItem>
 									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.event.etl</artifactId>
@@ -260,7 +258,7 @@
 									<overWrite>true</overWrite>
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
-								
+
 								<artifactItem>
 									<groupId>org.oiue.services</groupId>
 									<artifactId>org.oiue.service.event.execute</artifactId>
@@ -481,6 +479,62 @@
 								</artifactItem>
 								<artifactItem>
 									<groupId>${oiue.groupId}</groupId>
+									<artifactId>org.oiue.service.event.entity</artifactId>
+									<version>${oiue.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.basedir}/bundle</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>${oiue.groupId}</groupId>
+									<artifactId>org.oiue.service.event.entity.impl</artifactId>
+									<version>${oiue.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.basedir}/bundle</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>com.lingtu.services</groupId>
+									<artifactId>user.tasks</artifactId>
+									<version>${oiue.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.basedir}/bundle</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>${oiue.groupId}</groupId>
+									<artifactId>org.oiue.service.http.client</artifactId>
+									<version>${oiue.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.basedir}/bundle</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>${oiue.groupId}</groupId>
+									<artifactId>org.oiue.service.http.client.apache</artifactId>
+									<version>${oiue.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.basedir}/bundle</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>${oiue.groupId}</groupId>
+									<artifactId>org.oiue.service.threadpool</artifactId>
+									<version>${oiue.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.basedir}/bundle</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>${oiue.groupId}</groupId>
+									<artifactId>org.oiue.service.threadpool.impl</artifactId>
+									<version>${oiue.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.basedir}/bundle</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>${oiue.groupId}</groupId>
 									<artifactId>org.oiue.service.event.etl</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
@@ -537,22 +591,8 @@
 									<overWrite>true</overWrite>
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
-							<!-- 	<artifactItem>
-									<groupId>${oiue.groupId}.odps</groupId>
-									<artifactId>org.oiue.service.odp.dmo.h2</artifactId>
-									<version>${oiue.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${project.basedir}/bundle</outputDirectory>
-								</artifactItem>
-								<artifactItem>
-									<groupId>${oiue.groupId}.odps</groupId>
-									<artifactId>org.oiue.service.odp.dmo.mysql</artifactId>
-									<version>${oiue.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${project.basedir}/bundle</outputDirectory>
-								</artifactItem> -->
+								<!-- <artifactItem> <groupId>${oiue.groupId}.odps</groupId> <artifactId>org.oiue.service.odp.dmo.h2</artifactId> <version>${oiue.version}</version> <type>jar</type> <overWrite>true</overWrite> <outputDirectory>${project.basedir}/bundle</outputDirectory> </artifactItem> <artifactItem> <groupId>${oiue.groupId}.odps</groupId> <artifactId>org.oiue.service.odp.dmo.mysql</artifactId> <version>${oiue.version}</version> 
+									<type>jar</type> <overWrite>true</overWrite> <outputDirectory>${project.basedir}/bundle</outputDirectory> </artifactItem> -->
 								<artifactItem>
 									<groupId>${oiue.groupId}.odps</groupId>
 									<artifactId>org.oiue.service.odp.dmo.postgresql</artifactId>
@@ -561,14 +601,7 @@
 									<overWrite>true</overWrite>
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
-								<!-- <artifactItem>
-									<groupId>${oiue.groupId}.odps</groupId>
-									<artifactId>org.oiue.service.odp.dmo.neo4j</artifactId>
-									<version>${oiue.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${project.basedir}/bundle</outputDirectory>
-								</artifactItem> -->
+								<!-- <artifactItem> <groupId>${oiue.groupId}.odps</groupId> <artifactId>org.oiue.service.odp.dmo.neo4j</artifactId> <version>${oiue.version}</version> <type>jar</type> <overWrite>true</overWrite> <outputDirectory>${project.basedir}/bundle</outputDirectory> </artifactItem> -->
 
 								<artifactItem>
 									<groupId>${oiue.groupId}.odps</groupId>
@@ -586,22 +619,8 @@
 									<overWrite>true</overWrite>
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
-								<!-- <artifactItem>
-									<groupId>${oiue.groupId}.odps</groupId>
-									<artifactId>org.oiue.service.odp.res.dmo.h2</artifactId>
-									<version>${oiue.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${project.basedir}/bundle</outputDirectory>
-								</artifactItem>
-								<artifactItem>
-									<groupId>${oiue.groupId}.odps</groupId>
-									<artifactId>org.oiue.service.odp.res.dmo.mysql</artifactId>
-									<version>${oiue.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${project.basedir}/bundle</outputDirectory>
-								</artifactItem> -->
+								<!-- <artifactItem> <groupId>${oiue.groupId}.odps</groupId> <artifactId>org.oiue.service.odp.res.dmo.h2</artifactId> <version>${oiue.version}</version> <type>jar</type> <overWrite>true</overWrite> <outputDirectory>${project.basedir}/bundle</outputDirectory> </artifactItem> <artifactItem> <groupId>${oiue.groupId}.odps</groupId> <artifactId>org.oiue.service.odp.res.dmo.mysql</artifactId> <version>${oiue.version}</version> 
+									<type>jar</type> <overWrite>true</overWrite> <outputDirectory>${project.basedir}/bundle</outputDirectory> </artifactItem> -->
 								<artifactItem>
 									<groupId>${oiue.groupId}.odps</groupId>
 									<artifactId>org.oiue.service.odp.res.dmo.postgresql</artifactId>
@@ -610,14 +629,7 @@
 									<overWrite>true</overWrite>
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
-								<!-- <artifactItem>
-									<groupId>${oiue.groupId}.odps</groupId>
-									<artifactId>org.oiue.service.odp.res.dmo.neo4j</artifactId>
-									<version>${oiue.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${project.basedir}/bundle</outputDirectory>
-								</artifactItem> -->
+								<!-- <artifactItem> <groupId>${oiue.groupId}.odps</groupId> <artifactId>org.oiue.service.odp.res.dmo.neo4j</artifactId> <version>${oiue.version}</version> <type>jar</type> <overWrite>true</overWrite> <outputDirectory>${project.basedir}/bundle</outputDirectory> </artifactItem> -->
 								<artifactItem>
 									<groupId>${oiue.groupId}.odps</groupId>
 									<artifactId>org.oiue.service.odp.res.api</artifactId>
@@ -659,7 +671,7 @@
 									<overWrite>true</overWrite>
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
-								
+
 								<artifactItem>
 									<groupId>${oiue.groupId}.odps</groupId>
 									<artifactId>org.oiue.service.odp.structure.api</artifactId>
@@ -676,7 +688,7 @@
 									<overWrite>true</overWrite>
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
-								
+
 								<artifactItem>
 									<groupId>${oiue.groupId}.odps</groupId>
 									<artifactId>org.oiue.service.odp.structure.selectsql</artifactId>
@@ -685,46 +697,10 @@
 									<overWrite>true</overWrite>
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
-								<!-- <artifactItem>
-									<groupId>${oiue.groupId}.odps.events</groupId>
-									<artifactId>org.oiue.service.odp.event.dmo.mysql</artifactId>
-									<version>${oiue.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${project.basedir}/bundle</outputDirectory>
-								</artifactItem>
-								<artifactItem>
-									<groupId>${oiue.groupId}.odps.events</groupId>
-									<artifactId>org.oiue.service.odp.event.dmo.mysql.q</artifactId>
-									<version>${oiue.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${project.basedir}/bundle</outputDirectory>
-								</artifactItem>
-								<artifactItem>
-									<groupId>${oiue.groupId}.odps.events</groupId>
-									<artifactId>org.oiue.service.odp.event.dmo.mysql.t</artifactId>
-									<version>${oiue.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${project.basedir}/bundle</outputDirectory>
-								</artifactItem>
-								<artifactItem>
-									<groupId>${oiue.groupId}.odps.events</groupId>
-									<artifactId>org.oiue.service.odp.event.dmo.mysql.select</artifactId>
-									<version>${oiue.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${project.basedir}/bundle</outputDirectory>
-								</artifactItem>
-								<artifactItem>
-									<groupId>${oiue.groupId}.odps.events</groupId>
-									<artifactId>org.oiue.service.odp.event.dmo.mysql.selects</artifactId>
-									<version>${oiue.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${project.basedir}/bundle</outputDirectory>
-								</artifactItem> -->
+								<!-- <artifactItem> <groupId>${oiue.groupId}.odps.events</groupId> <artifactId>org.oiue.service.odp.event.dmo.mysql</artifactId> <version>${oiue.version}</version> <type>jar</type> <overWrite>true</overWrite> <outputDirectory>${project.basedir}/bundle</outputDirectory> </artifactItem> <artifactItem> <groupId>${oiue.groupId}.odps.events</groupId> <artifactId>org.oiue.service.odp.event.dmo.mysql.q</artifactId> 
+									<version>${oiue.version}</version> <type>jar</type> <overWrite>true</overWrite> <outputDirectory>${project.basedir}/bundle</outputDirectory> </artifactItem> <artifactItem> <groupId>${oiue.groupId}.odps.events</groupId> <artifactId>org.oiue.service.odp.event.dmo.mysql.t</artifactId> <version>${oiue.version}</version> <type>jar</type> <overWrite>true</overWrite> <outputDirectory>${project.basedir}/bundle</outputDirectory> 
+									</artifactItem> <artifactItem> <groupId>${oiue.groupId}.odps.events</groupId> <artifactId>org.oiue.service.odp.event.dmo.mysql.select</artifactId> <version>${oiue.version}</version> <type>jar</type> <overWrite>true</overWrite> <outputDirectory>${project.basedir}/bundle</outputDirectory> </artifactItem> <artifactItem> <groupId>${oiue.groupId}.odps.events</groupId> <artifactId>org.oiue.service.odp.event.dmo.mysql.selects</artifactId> 
+									<version>${oiue.version}</version> <type>jar</type> <overWrite>true</overWrite> <outputDirectory>${project.basedir}/bundle</outputDirectory> </artifactItem> -->
 								<artifactItem>
 									<groupId>${oiue.groupId}.odps.events</groupId>
 									<artifactId>org.oiue.service.odp.event.dmo.postgresql</artifactId>
@@ -735,7 +711,7 @@
 								</artifactItem>
 								<artifactItem>
 									<groupId>${oiue.groupId}.odps.events</groupId>
-									<artifactId>org.oiue.service.odp.event.dmo.postgresql.proess</artifactId>
+									<artifactId>org.oiue.service.odp.event.dmo.postgresql.process</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
 									<overWrite>true</overWrite>
@@ -765,22 +741,8 @@
 									<overWrite>true</overWrite>
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
-								<!-- <artifactItem>
-									<groupId>${oiue.groupId}.odps.events</groupId>
-									<artifactId>org.oiue.service.odp.event.dmo.neo4j</artifactId>
-									<version>${oiue.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${project.basedir}/bundle</outputDirectory>
-								</artifactItem>
-								<artifactItem>
-									<groupId>${oiue.groupId}.odps.events</groupId>
-									<artifactId>org.oiue.service.odp.event.dmo.neo4j.insert</artifactId>
-									<version>${oiue.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${project.basedir}/bundle</outputDirectory>
-								</artifactItem> -->
+								<!-- <artifactItem> <groupId>${oiue.groupId}.odps.events</groupId> <artifactId>org.oiue.service.odp.event.dmo.neo4j</artifactId> <version>${oiue.version}</version> <type>jar</type> <overWrite>true</overWrite> <outputDirectory>${project.basedir}/bundle</outputDirectory> </artifactItem> <artifactItem> <groupId>${oiue.groupId}.odps.events</groupId> <artifactId>org.oiue.service.odp.event.dmo.neo4j.insert</artifactId> 
+									<version>${oiue.version}</version> <type>jar</type> <overWrite>true</overWrite> <outputDirectory>${project.basedir}/bundle</outputDirectory> </artifactItem> -->
 
 								<artifactItem>
 									<groupId>${oiue.groupId}.odps</groupId>
@@ -886,7 +848,6 @@
 									<overWrite>true</overWrite>
 									<outputDirectory>${project.basedir}/bundle</outputDirectory>
 								</artifactItem>
-
 							</artifactItems>
 						</configuration>
 					</execution>
