@@ -559,6 +559,30 @@
 								</artifactItem>
 								<artifactItem>
 									<groupId>${oiue.groupId}.actions</groupId>
+									<artifactId>org.oiue.service.action.filter.execute.visit</artifactId>
+									<version>${oiue.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.basedir}/bundle</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>${oiue.groupId}.actions</groupId>
+									<artifactId>org.oiue.service.action.filter.module2domain</artifactId>
+									<version>${oiue.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.basedir}/bundle</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>${oiue.groupId}.actions</groupId>
+									<artifactId>org.oiue.service.action.filter.permission</artifactId>
+									<version>${oiue.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.basedir}/bundle</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>${oiue.groupId}.actions</groupId>
 									<artifactId>org.oiue.service.action.filter.auth</artifactId>
 									<version>${oiue.version}</version>
 									<type>jar</type>
